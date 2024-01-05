@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кари лучшая!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 48px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            animation: heartbeat 1s infinite;
+        }
+
+        h1::before,
+        h1::after {
+            content: '\2764'; /* Unicode символ сердечка */
+            font-size: 36px;
+            color: #e74c3c;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1::before {
+            left: -40px;
+        }
+
+        h1::after {
+            right: -40px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .smiley {
+            font-size: 24px;
+            position: absolute;
+            animation: float 3s infinite;
+        }
+
+        .smiley1 { top: 10%; left: 10%; }
+        .smiley2 { top: 20%; left: 70%; }
+        .smiley3 { top: 50%; left: 30%; }
+        .smiley4 { top: 80%; left: 80%; }
+
+        .cat {
+            max-width: 100px;
+            position: absolute;
+            animation: spin 5s infinite;
+        }
+
+        .cat1 { top: 30%; left: 60%; }
+        .cat2 { top: 70%; left: 10%; }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes spin {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Кари лучшая!</h1>
+    <p>Ты просто невероятна! <br> Спасибо за всё, что ты делаешь!</p>
+
+    <div class="smiley smiley1">&#128515;</div>
+    <div class="smiley smiley2">&#128516;</div>
+    <div class="smiley smiley3">&#128522;</div>
+    <div class="smiley smiley4">&#128521;</div>
+
+    <img class="cat cat1" src="https://placekitten.com/100/100" alt="Котик">
+    <img class="cat cat2" src="https://placekitten.com/100/100" alt="Котик">
+</body>
+</html>
